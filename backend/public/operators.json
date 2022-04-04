@@ -4,13 +4,15 @@
                 "id": 0,
                 "name": "SpaceX",
                 "seats": 67,
-                "price": 150
+                "price": 150,
+                "desc": "Why settle for anything other than the ultimate rocket. The Falcon Heavy is the most powerful operational rocket in the world by a factor of two. With the ability to lift into orbit nearly 64 metric tons. It is composed of three Falcon 9 nine-engine cores whose 27 Merlin engines together generate more than 5 million pounds of thrust at liftoff, equal to approximately eighteen 747 aircraft. Why fly eighteen times on a 747 aircraft when you can fly once in one of our Falcon Heavies? Book your ticket now, and have seat."
             },
             {
                 "id": 1,
                 "name": "Blue Origin",
                 "seats": 43,
-                "price": 200
+                "price": 200,
+                "desc": "Our reusable launch vehicle is taking payloads - and you - to space. Sure, the Falcon Heavy carries more weight, our competitors might say, but does it carry the American values and ideals with it? No, if you want those, you need a ticket on our New Shepard. Just as God seeded earth with mankind we will deliver mankind to our galactic neighbouring planets and seed those with the American dream."
             }
         ],
         "agencies": [{

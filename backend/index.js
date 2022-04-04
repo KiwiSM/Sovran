@@ -22,6 +22,6 @@ app.get("/api", (req, res) => {
 
 //-----------------------------------------------------//
 
-let data = fs.readFileSync("./public/operators.json");
+/* let data = fs.readFileSync("./public/operators.json");
 let operators = JSON.parse(data);
-console.log(operators);
+console.log(operators); */
