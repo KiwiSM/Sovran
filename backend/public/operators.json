@@ -1,44 +1,38 @@
-[{
+{
     "operators": {
-        "companies": {
-            "spacex": {
+        "companies": [{
                 "id": 0,
                 "name": "SpaceX",
                 "seats": 67,
                 "price": 150
             },
-            "blueOrigin": {
+            {
                 "id": 1,
                 "name": "Blue Origin",
                 "seats": 43,
                 "price": 200
             }
-        },
-        "agencies": {
-            "nasa": {
-                "id": 0,
-                "name": "NASA",
-                "seats": 34,
-                "price": 300
-            },
-            "esa": {
-                "id": 3,
-                "name": "ESA",
-                "seats": 39,
-                "price": 300
-            },
-            "roscosmos": {
-                "id": 4,
-                "name": "Roscosmos",
-                "seats": 45,
-                "price": 250
-            },
-            "cnsa": {
-                "id": 5,
-                "name": "CNSA",
-                "seats": 45,
-                "price": 250
-            }
-        }
+        ],
+        "agencies": [{
+            "id": 0,
+            "name": "NASA",
+            "seats": 34,
+            "price": 300
+        }, {
+            "id": 1,
+            "name": "ESA",
+            "seats": 39,
+            "price": 300
+        }, {
+            "id": 2,
+            "name": "Roscosmos",
+            "seats": 45,
+            "price": 250
+        }, {
+            "id": 3,
+            "name": "CNSA",
+            "seats": 45,
+            "price": 250
+        }]
     }
-}]
+}
