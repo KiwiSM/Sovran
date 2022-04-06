@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: rgb(20, 20, 88);
+}
+
+* {
+  color: white
+}
+
+button {
+  color: black;
+}

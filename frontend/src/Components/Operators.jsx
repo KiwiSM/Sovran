@@ -1,4 +1,6 @@
+import styles from './Operators.module.css';
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";;
 
 export default function Operators() {
     const [companies, setCompanies] = useState([]);
@@ -13,27 +15,35 @@ export default function Operators() {
     const agencies = companies.agencies;
 
     return (
-        <main>
+        <main className={styles.main}>
             <h1>This is from Operators</h1>
-            {
+            { companies.companies ?
                 privateCompanies.map((company, index) => (
-                    <div key={index}>
-                    <h2>Name: {company.name}</h2>
-                    <h4>Price: ${company.price}</h4>
-                    <h4>Available seats: {company.seats}</h4>
-                    <p>Description: {company.desc}</p>
+                    <Link 
+                    to="/tickets"
+                    state={company}>
+                    <div className={styles.div} key={index}>
+                        <h2>Name: {company.name}</h2>
+                        <h4>Price: ${company.price}</h4>
+                        <h4>Available seats: {company.seats}</h4>
+                        <p>Description: {company.desc}</p>
                     </div>
-                ))
+                    </Link>
+                )) : null
             }
-            {
+            { companies.agencies ? 
                 agencies.map((agency, index) => (
-                <div key={index}>
-                    <h2>Name: {agency.name}</h2>
-                    <h4>Price: ${agency.price}</h4>
-                    <h4>Available seats: {agency.seats}</h4>
-                    <p>Description: {agency.desc}</p>
-                </div>
-                ))
+                    <Link 
+                    to="/tickets"
+                    state={agency}>
+                    <div className={styles.div} key={index}>
+                        <h2>Name: {agency.name}</h2>
+                        <h4>Price: ${agency.price}</h4>
+                        <h4>Available seats: {agency.seats}</h4>
+                        <p>Description: {agency.desc}</p>
+                    </div>
+                    </Link>
+                )) : null
             }
         </main>
     )
