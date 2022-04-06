@@ -8,11 +8,14 @@ export default function Cart() {
 
     return (
         <div>
-            <h1>This is from Cart</h1>
-            <h2>Name: {operator.name}</h2>
-            <h4>Price: ${operator.price}</h4>
-            <h4>Available seats: {operator.seats}</h4>
-            <p>Description: {operator.desc}</p>
+            {
+                operator.map((company, index) => (
+                    <div key={index}>
+                        <h1>{company.name}</h1>
+                        <h1>{company.desc}</h1>
+                    </div>
+                ))
+            }
             <button onClick={() => navigate("/receit")}>Pay up</button>
         </div>
     )

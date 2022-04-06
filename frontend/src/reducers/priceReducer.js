@@ -1,13 +1,13 @@
 import { totalPrice } from "../globalStore";
 
-const priceReducer = (money = totalPrice, action) => {
+const priceReducer = (state = totalPrice, action) => {
     switch(action.type) {
         case "BUY_TICKET": 
-            return money + action.payload
+            return state + action.payload
         case "REMOVE_TICKET":
-            return money - action.payload
+            return state - action.payload
         default: 
-            return money
+            return state
     }
 }
 

@@ -19,10 +19,11 @@ export default function Operators() {
             <h1>This is from Operators</h1>
             { companies.companies ?
                 privateCompanies.map((company, index) => (
-                    <Link 
+                    <Link
                     to="/tickets"
-                    state={company}>
-                    <div className={styles.div} key={index}>
+                    state={company}
+                    key={index}>
+                    <div className={styles.div}>
                         <h2>Name: {company.name}</h2>
                         <h4>Price: ${company.price}</h4>
                         <h4>Available seats: {company.seats}</h4>
@@ -35,8 +36,9 @@ export default function Operators() {
                 agencies.map((agency, index) => (
                     <Link 
                     to="/tickets"
-                    state={agency}>
-                    <div className={styles.div} key={index}>
+                    state={agency}
+                    key={index}>
+                    <div className={styles.div}>
                         <h2>Name: {agency.name}</h2>
                         <h4>Price: ${agency.price}</h4>
                         <h4>Available seats: {agency.seats}</h4>
