@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { buyTicket, removeTicket } from "../actions/priceAction";
+import { buyTicket, removeTicket, resetPrice } from "../actions/priceAction";
 import { addOperator } from "../actions/operatorAction";
-import { raiseAmount, lowerAmount } from "../actions/amountAction";
+import { raiseAmount, lowerAmount, resetAmount } from "../actions/amountAction";
 
 export default function Tickets() {
     const location = useLocation();
@@ -22,7 +22,9 @@ export default function Tickets() {
         dispatch(lowerAmount());
     }
     function add() {
-        dispatch(addOperator(location.state, amount))
+        dispatch(addOperator(location.state, amount));
+        dispatch(resetAmount());
+        dispatch(resetPrice());
     }
 
     return (
@@ -34,7 +36,7 @@ export default function Tickets() {
                 <button onClick={removePrice}>MINUS -</button>
                 <p>{amount}</p>
                 <h4>Available seats: {location.state.seats}</h4>
-                <p>Description: {location.state.desc}</p>
+{/*                 <p>Description: {location.state.desc}</p> */}
                 <h4>Total price: ${price}</h4>
                 <button onClick={add}>Submit to cart</button>
                 <button onClick={() => navigate("/cart")} >Go to cart</button>

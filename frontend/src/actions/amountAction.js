@@ -5,3 +5,7 @@ export const raiseAmount = () => ({
 export const lowerAmount = () => ({
     type: "LOWER_AMOUNT"
 })
+
+export const resetAmount = () => ({
+    type: "RESET_AMOUNT"
+})

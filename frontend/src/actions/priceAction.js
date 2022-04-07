@@ -7,3 +7,7 @@ export const removeTicket = (price) => ({
     type: "REMOVE_TICKET",
     payload: price
 })
+
+export const resetPrice = () => ({
+    type: "RESET_PRICE"
+})

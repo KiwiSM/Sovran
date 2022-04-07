@@ -18,9 +18,11 @@ export default function Cart() {
                 operator.map((company, index) => (
                     <div key={index}>
                         <h1>{company.operator.name}</h1>
-                        <h1>{company.operator.desc}</h1>
+{/*                         <h1>{company.operator.desc}</h1> */}
                         <h2>{company.operator.price}</h2>
                         <h4>{company.amount}</h4>
+                        <button>PLUS</button>
+                        <button>MINUS</button>
                     </div>
                 ))
             }

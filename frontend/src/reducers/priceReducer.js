@@ -6,6 +6,8 @@ const priceReducer = (state = totalPrice, action) => {
             return state + action.payload
         case "REMOVE_TICKET":
             return state - action.payload
+        case "RESET_PRICE":
+            return 0
         default: 
             return state
     }

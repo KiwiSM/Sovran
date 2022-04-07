@@ -6,6 +6,8 @@ const amountReducer = (state = amount, action) => {
             return state + 1
         case "LOWER_AMOUNT":
             return state - 1
+        case "RESET_AMOUNT":
+            return 0
         default: 
             return state
     }

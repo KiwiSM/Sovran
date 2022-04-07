@@ -27,7 +27,7 @@ export default function Operators() {
                         <h2>Name: {company.name}</h2>
                         <h4>Price: ${company.price}</h4>
                         <h4>Available seats: {company.seats}</h4>
-                        <p>Description: {company.desc}</p>
+{/*                         <p>Description: {company.desc}</p> */}
                     </div>
                     </Link>
                 )) : null
