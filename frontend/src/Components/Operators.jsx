@@ -14,39 +14,55 @@ export default function Operators() {
     const privateCompanies = companies.companies
     const agencies = companies.agencies;
 
+    const [description, setDescription] = useState(false);
+
+    function readMore() {
+        setDescription(!description);
+    }
+
     return (
-        <main className={styles.main}>
-            <h1>This is from Operators</h1>
+        <main>
+            <section className={styles.section}>
             { companies.companies ?
                 privateCompanies.map((company, index) => (
-                    <Link
-                    to="/tickets"
-                    state={company}
-                    key={index}>
-                    <div className={styles.div}>
-                        <h2>Name: {company.name}</h2>
+                    <div key={index} className={styles.div}>
+                        <h2>{company.name}</h2>
+                        <img src={company.url} alt="" />
                         <h4>Price: ${company.price}</h4>
                         <h4>Available seats: {company.seats}</h4>
-{/*                         <p>Description: {company.desc}</p> */}
+                        <Link 
+                        to="/tickets"
+                        state={company}
+                        key={index}>
+                        <button className={styles.button}>Buy</button>
+                        </Link>
+                        {   
+                            description ? (<p className='description'>{company.desc}</p>) : null
+                        }
                     </div>
-                    </Link>
                 )) : null
             }
             { companies.agencies ? 
                 agencies.map((agency, index) => (
-                    <Link 
-                    to="/tickets"
-                    state={agency}
-                    key={index}>
-                    <div className={styles.div}>
-                        <h2>Name: {agency.name}</h2>
+                    <div key={index} className={styles.div}>
+                        <h2>{agency.name}</h2>
+                        <img src={agency.url} alt="" />
                         <h4>Price: ${agency.price}</h4>
                         <h4>Available seats: {agency.seats}</h4>
-                        <p>Description: {agency.desc}</p>
+                        <Link 
+                        to="/tickets"
+                        state={agency}
+                        key={index}>
+                        <button className={styles.button}>Buy</button>
+                        </Link>
+                        {   
+                            description ? (<p className='description'>{agency.desc}</p>) : null
+                        }
                     </div>
-                    </Link>
                 )) : null
             }
+            </section>
+            <button className={styles.readMore} onClick={readMore}>Read more</button>
         </main>
     )
 }

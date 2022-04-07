@@ -1,0 +1,15 @@
+.div {
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.toReceit {
+    margin: 0.5rem;
+    height: 2.5rem;
+    width: 10rem;
+    border: none;
+    font-weight: 700;
+}

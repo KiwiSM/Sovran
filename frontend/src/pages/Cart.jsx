@@ -1,3 +1,4 @@
+import styles from "./Cart.module.css"
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -16,18 +17,15 @@ export default function Cart() {
         <div>
             {
                 operator.map((company, index) => (
-                    <div key={index}>
-                        <h1>{company.operator.name}</h1>
-{/*                         <h1>{company.operator.desc}</h1> */}
-                        <h2>{company.operator.price}</h2>
-                        <h4>{company.amount}</h4>
-                        <button>PLUS</button>
-                        <button>MINUS</button>
+                    <div className={styles.div} key={index}>
+                        <h2>{company.operator.name}</h2>
+                        <h4>Price per ticket: ${company.operator.price}</h4>
+                        <h4>Number of tickets: {company.amount}</h4>
                     </div>
                 ))
             }
-            <h4>{totalPrice}</h4>
-            <button onClick={() => navigate("/receit")}>Pay up</button>
+            <h4>Total price: ${totalPrice}</h4>
+            <button className={styles.toReceit} onClick={() => navigate("/receit")}>Submit payment</button>
         </div>
     )
 }

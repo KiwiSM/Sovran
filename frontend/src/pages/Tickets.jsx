@@ -1,3 +1,4 @@
+import styles from "./Tickets.module.css"
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { buyTicket, removeTicket, resetPrice } from "../actions/priceAction";
@@ -28,18 +29,20 @@ export default function Tickets() {
     }
 
     return (
-            <div>
-                <h2>Name: {location.state.name}</h2>
+            <div className={styles.div}>
+                <h2>{location.state.name}</h2>
                 <h4>Price: ${location.state.price}</h4>
-                <h4>Amount: {location.state.amount}</h4>
-                <button onClick={addPrice}>PLUS +</button>
-                <button onClick={removePrice}>MINUS -</button>
-                <p>{amount}</p>
-                <h4>Available seats: {location.state.seats}</h4>
-{/*                 <p>Description: {location.state.desc}</p> */}
+                <h4>Number of tickets: {location.state.amount}</h4>
+                <div className={styles.container}>
+                    <button className={styles.button} onClick={addPrice}>+</button>
+                    <p className={styles.p}>{amount}</p>
+                    <button className={styles.button} onClick={removePrice}>-</button>
+                </div>
                 <h4>Total price: ${price}</h4>
-                <button onClick={add}>Submit to cart</button>
-                <button onClick={() => navigate("/cart")} >Go to cart</button>
+                <div className={styles.container}>
+                    <button className={styles.toCart} onClick={add}>Submit to cart</button>
+                    <button className={styles.toCart} onClick={() => navigate("/cart")} >Go to cart</button>
+                </div>
             </div>
     )
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Start from './pages/Start';
 import Order from './pages/Order';
 import Tickets from './pages/Tickets';
@@ -10,8 +10,7 @@ function App() {
 
   return (
     <Router>
-      <main>
-        <Link to="/order">Check out available companies:</Link>
+      <main className='main'>
         <Routes>
           <Route path="/" element={<Start />} /> 
           <Route path="/order" element={<Order/>} />
