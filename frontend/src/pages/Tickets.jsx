@@ -22,7 +22,7 @@ export default function Tickets() {
         dispatch(lowerAmount());
     }
     function add() {
-        dispatch(addOperator(location.state))
+        dispatch(addOperator(location.state, amount))
     }
 
     return (

@@ -1,4 +1,5 @@
-export const addOperator = (operator) => ({
+export const addOperator = (operator, amount) => ({
     type: "ADD_OPERATOR",
-    payload: operator
+    payload: operator,
+    number: amount
 })
