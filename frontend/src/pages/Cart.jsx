@@ -6,7 +6,6 @@ export default function Cart() {
     const navigate = useNavigate();
     const operator = useSelector(state => state.operatorReducer)
     
-    console.log(operator);
     let totalPrice = 0;
 
     operator.map((company) => {

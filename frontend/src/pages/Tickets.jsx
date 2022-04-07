@@ -12,7 +12,6 @@ export default function Tickets() {
     
     const price = useSelector(state => state.priceReducer)
     const amount = useSelector(state => state.amountReducer);
-    console.log(amount);
 
     function addPrice() {
         dispatch(buyTicket(location.state.price));
